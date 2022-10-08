@@ -89,6 +89,13 @@ const editBookByIdHandler = (request, h) => {
       pages,
       updatedAt,
     };
+
+    const response = h.response({
+      status: 'success',
+      message: 'Buku berhasil diperbaharui',
+    });
+    response.code(200);
+    return response;
   }
 
   const response = h.response({
